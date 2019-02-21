@@ -8,7 +8,7 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
-        console.log(req.body);
+        // console.log(req.body);
 
         var difference = function (a, b) { return Math.abs(a - b); }
 
@@ -17,17 +17,30 @@ module.exports = function (app) {
         for (var i = 0; i <friends.length; i++){
 
             var totalFriendDiff= 0;
-            for (var qi= 0; qi < friends.scores.length; qi++){
-                totalFriendDiff += difference(
-                    friends.scores[qi], req.body.scores[qi]
-                  );
-                if (qi = friends[i].length - 1) {
+            for (var qi= 0; qi < 10; qi++){
+
+                var friendScore = parseInt(friends[i].scores[qi]);
+                var userScore = parseInt(req.body.scores);
+                // difference(friends[i].scores[qi],req.body.scores);
+
+                diff = difference(friendScore, userScore);
+                
+                totalFriendDiff += diff
+                if (qi === 9) {
+                    totalFriendDiff += console.log("totalFriendDiff " + totalFriendDiff)
                     differenceArray.push(totalFriendDiff);
+                
                 }
+               
             }
+            
+             
+            
             
         };
 
+
+        console.log("bestmatchInd " + bestMatchIndex)
         var bestMatchIndex = differenceArray.indexOf(
           Math.min(differenceArray)
         );
@@ -36,7 +49,7 @@ module.exports = function (app) {
 
         var bestMatch = friends[bestMatchIndex];
         friends.push(bestMatch);
-        res.json(bestMatch)
+        return res.json(bestMatch)
 
     });
        
