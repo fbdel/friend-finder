@@ -61,7 +61,7 @@ var friends = [
     scores: [1, 2, 4, 5, 2, 2, 3, 1, 1, 1]
   },
   {
-    name: "Hery",
+    name: "Henry",
     photo:
       "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2018%2F11%2F22%2F12%2F50%2Fportrait-3831836_960_720.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fen%2Fportrait-male-pose-beard-mustache-3831836%2F&docid=ip-F7SRoklC4SM&tbnid=Hc2DdW0MYsmQfM%3A&vet=12ahUKEwiS9ZXxh8fgAhWPGt8KHQ2AANM4ZBAzKA4wDnoECAEQDw..i&w=480&h=720&bih=663&biw=790&q=portrait&ved=2ahUKEwiS9ZXxh8fgAhWPGt8KHQ2AANM4ZBAzKA4wDnoECAEQDw&iact=mrc&uact=8",
     scores: [2, 5, 1, 1, 1, 1, 2, 4, 4, 2]
